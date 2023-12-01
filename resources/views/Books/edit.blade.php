@@ -32,7 +32,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('publisher')" />
                         </div>
                         <div class="max-w-xl">
-                            <x-input-label for="city" value="Kota Terbit"/>
+                            <x-input-label for="city" value="Kota"/>
                             <x-text-input id="city" type="text" name="city" class="mt-1 block w-full" value="{{ old('city', $book->city)}}" required/>
                             <x-input-error class="mt-2" :messages="$errors->get('city')" />
                         </div>
@@ -42,7 +42,7 @@
                             <x-input-error class="mt-2" :messages="$errors->get('quantity')" />
                         </div>
                         <div class="max-w-xl">
-                            <x-input-label for="bookshelf" value="Kategori Rak Buku"/>
+                            <x-input-label for="bookshelf" value="Genre"/>
                             <x-select-input id="bookshelf" name="bookshelf_id" class="mt-1 block w-full" required>
                             <option value="">Open this select menu</option>
                             @foreach($bookshelves as $key => $value)
